@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "netlogix/breakpointconditionalcontent",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netlogix\\BreakpointConditionalContent\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Netlogix.BreakpointConditionalContent"
+        }
+    }
+}

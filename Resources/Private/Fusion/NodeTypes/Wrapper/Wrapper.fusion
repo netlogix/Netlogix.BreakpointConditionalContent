@@ -1,0 +1,19 @@
+prototype(Netlogix.BreakpointConditionalContent.NodeTypes:Wrapper) < prototype(Neos.Neos:ContentComponent) {
+    wrapperClasses = Neos.Fusion:Join {
+        base = 'breakpoint-conditional-content'
+
+        breakpoints = Neos.Fusion:Loop {
+            items = ${q(node).property('breakpoints')}
+            itemRenderer = ${'breakpoint-' + item}
+
+            @glue = ' '
+            @if.hasBreakpointsSelected = ${!Array.isEmpty(this.items)}
+        }
+
+        @glue = ' '
+    }
+
+    renderer = afx`
+        <Neos.Neos:ContentCollection nodePath="content" attributes.class={props.wrapperClasses} />
+    `
+}

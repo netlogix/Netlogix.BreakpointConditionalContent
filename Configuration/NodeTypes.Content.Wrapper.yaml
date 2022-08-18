@@ -1,0 +1,33 @@
+'Netlogix.BreakpointConditionalContent.NodeTypes:Wrapper':
+  superTypes:
+    'Neos.Neos:Content': true
+
+  ui:
+    icon: 'ruler-horizontal'
+    position: 1000
+    label: 'Breakpoint-abhängiger Inhalt'
+    inspector:
+      groups:
+        breakpointSettings:
+          icon: 'ruler-horizontal'
+          label: 'Breakpoints'
+
+  properties:
+    breakpoints:
+      defaultValue: []
+      type: array<string>
+      ui:
+        inspector:
+          group: breakpointSettings
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            dataSourceIdentifier: 'netlogixBreakpoints'
+            placeholder: 'Breakpoints auswählen'
+            multiple: true
+
+  childNodes:
+    content:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': true
