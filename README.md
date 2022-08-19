@@ -2,7 +2,10 @@
 
 This package adds a simple node type that receives a subset of one or multiple editor-selectable classes with the intention to control the display of content dependent on device breakpoints.
 
-The content element created by this package is intended to be used as a container to wrap the content which needs to be displayed conditionally. The classes on the wrapper can then be styled as needed.
+### Intended use case and styling
+
+The content element created by this package is intended to be used as a container to wrap the content which needs to be displayed conditionally. 
+This container then receives classes (see below) that require to be styled as needed, for example by setting the base class to 'display: none;' and then using media-queries to re-enable the display for a given breakpoint.
 
 ### Base class
 
