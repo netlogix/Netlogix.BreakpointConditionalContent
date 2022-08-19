@@ -1,0 +1,18 @@
+{
+    "description": "Adds a content wrapper element that allows selectable, breakpoint identifying classes intended to be styled as needed.",
+    "type": "neos-package",
+    "name": "netlogix/breakpointconditionalcontent",
+    "require": {
+        "neos/flow": "^5.3 || ^7.3 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netlogix\\BreakpointConditionalContent\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Netlogix.BreakpointConditionalContent"
+        }
+    }
+}
