@@ -17,6 +17,7 @@
       defaultValue: []
       type: array<string>
       ui:
+        reloadIfChanged: true
         inspector:
           group: breakpointSettings
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
