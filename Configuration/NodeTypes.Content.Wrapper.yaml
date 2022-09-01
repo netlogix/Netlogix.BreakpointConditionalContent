@@ -17,6 +17,8 @@
       defaultValue: []
       type: array<string>
       ui:
+        label: 'Breakpoints'
+        showInCreationDialog: true
         reloadIfChanged: true
         inspector:
           group: breakpointSettings
@@ -25,6 +27,8 @@
             dataSourceIdentifier: 'netlogixBreakpoints'
             placeholder: 'Breakpoints auswählen'
             multiple: true
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': [ ]
 
   childNodes:
     content:
@@ -32,3 +36,4 @@
       constraints:
         nodeTypes:
           '*': true
+          'Netlogix.BreakpointConditionalContent.NodeTypes:Wrapper': false
