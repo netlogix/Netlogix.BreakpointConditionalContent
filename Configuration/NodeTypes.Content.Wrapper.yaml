@@ -35,5 +35,5 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          '*': true
+          '*': false
           'Netlogix.BreakpointConditionalContent.NodeTypes:Wrapper': false
