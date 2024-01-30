@@ -36,4 +36,3 @@
       constraints:
         nodeTypes:
           '*': false
-          'Netlogix.BreakpointConditionalContent.NodeTypes:Wrapper': false
