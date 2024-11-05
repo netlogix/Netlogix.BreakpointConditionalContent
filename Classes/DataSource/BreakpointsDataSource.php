@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Netlogix\BreakpointConditionalContent\DataSource;
 
+use Neos\ContentRepository\Core\Projection\ContentGraph\Node;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\Neos\Service\DataSource\AbstractDataSource;
 
@@ -10,7 +11,7 @@ class BreakpointsDataSource extends AbstractDataSource
 {
     protected static $identifier = 'netlogixBreakpoints';
 
-    public function getData(NodeInterface $node = null, array $arguments = [])
+    public function getData(NodeInterface|Node $node = null, array $arguments = [])
     {
         return [
             [
